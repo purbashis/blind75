@@ -1,20 +1,19 @@
 class Solution {
     public int maxArea(int[] height) {
-        int max= 0;
+        int max = 0;
         int left = 0;
-        int right =height.length-1;
+        int right = height.length - 1;
 
-        while(left<right){
-            int width = right -left;
-            int area = Math.min(height[left],height[right])*width;
+        while (left < right) {
+            int width = right - left;
+            int area = Math.min(height[left], height[right]) * width;
 
-            max=Math.max(max,area);
+            max = Math.max(max, area);
 
-            if(height[left]<=height[right]){
+            if (height[left] <= height[right]) {
                 left++;
 
-            }
-            else {
+            } else {
                 right--;
             }
         }
@@ -22,4 +21,4 @@ class Solution {
     }
 }
 
-//leetcode-11
+// leetcode-11
